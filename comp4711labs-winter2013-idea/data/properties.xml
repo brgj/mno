@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : properties.xml
+    Created on : November 4, 2010, 10:35 AM
+    Author     : jim
+    Description:
+        Sample webapp properties for the COMP4711 solutions
+-->
+
+<!DOCTYPE properties SYSTEM 'properties.dtd'>
+<properties>
+    <!-- term: the code for the term currently being worked on. -->
+    <property key="term">201230</property>
+    <!-- title: the title to show on reports for the current term -->
+    <property key="title">Comp4711 ... How bout them tourists?</property>
+    <!-- instructor: who is teaching the course this term -->
+    <property key="instructor">Jim Parry</property>
+    <!-- email: What email address would they like used? -->
+    <property key="email">jim_parry@bcit.ca</property>
+</properties>

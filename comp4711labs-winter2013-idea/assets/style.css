@@ -1,0 +1,62 @@
+/* 
+    Document   : style
+    Created on : Jan 17, 2011, 12:01:28 PM
+    Author     : Jim
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body { display: block; margin-left: 5%; margin-right:5%; padding: 0; 
+       width: 960px; font-family: verdana, tahoma, helvetica, arial, sans-serif;
+       text-align: left; color: black; font-size: 12pt;
+}
+
+#wrapper { display: block; clear: none; margin-right: 1em;
+           min-width: 600px; max-width: 950px; position: absolute;
+           top: auto; padding-right:5em;
+}
+#header { position: relative; margin-right: 1em;
+          background-image: url('/assets/images/banner2012.jpg');
+          background-repeat: repeat-x; height: 200px;
+}
+#navbar { margin: 1em; float: left; text-align: left; width: 180px;
+          display: block; background-color: #eefe80;}
+#navbar li { list-style: none;}
+#content { display: block; position: relative; margin: 1em;
+           text-align: left; margin-left:200px;}
+#footer {text-align:center; font-style: italic; font-size: 90%;
+         display:block; clear:left;}
+
+h1 {font-weight: bold; font-size: 125%; text-align:left;}
+h2 {font-weight: bold; font-size: 110%;  text-align:left;}
+img, a.img {border: none; border-bottom-style: none;}
+
+.title {float:right; margin-top: 4.5em; color: #402020;
+        font-size:150%;font-weight:bold;}
+
+pre {font-size: 80%;}
+.panel {overflow: auto; height: 300px; width:700px; border:dotted 1px #003399;}
+
+/* CSS Tabs from www.dynamicdrive.com */
+.basictab{padding: 3px 0; margin-left: 0; font: bold 12px Verdana;
+          border-bottom: 1px solid gray; list-style-type: none; text-align: left; }
+.basictab li{display: inline; margin: 0;}
+.basictab li a{text-decoration: none; padding: 3px 7px; margin-right: 3px;
+               border: 1px solid gray; border-bottom: none; background-color: #f6ffd5;
+               color: #2d2b2b;}
+.basictab li a:visited{color: #2d2b2b;}
+.basictab li a:hover{background-color: #DBFF6C; color: black;}
+.basictab li a:active{color: black;}
+.basictab li.selected a{position: relative; top: 1px; padding-top: 4px; 
+                        background-color: #DBFF6C; color: black;}
+
+.report {text-align:right;}
+
+/*** styling for the report ***/
+.report_top {font-size: 120%;}
+.report_major td:first-of-type {text-align:center;}
+.report_major td {text-align:right;font-size: 110%;font-weight:bold;font-style:italic;margin-left:20px;}
+.report_minor td:first-of-type {text-align:left;}
+.report_minor td {text-align:right;}
+.report_bottom td:first-of-type {text-align:center;}
+.report_bottom td {text-align:right;font-size: 120%; font-weight: bold}
