@@ -42,7 +42,7 @@ if (!defined('BASEPATH'))
  */
 
 $active_group = 'default';  
-if ($_SERVER['SERVER_NAME'] == 'comp4711.bcitxml.com') // alternate DB configuration for "production"
+if ($_SERVER['SERVER_NAME'] == 'mno.bcitxml.com') // alternate DB configuration for "production"
     $active_group = 'hosted';
 $active_record = TRUE;
 
@@ -67,9 +67,9 @@ $db['hosted'] = array();
 foreach($db['default'] as $key=>$value)
     $db['hosted'][$key] = $value;
 // and then override what we need to
-$db['hosted']['username'] = 'bcitx762_solved';
-$db['hosted']['password'] = 'ZpqPyGgIwf)v';
-$db['hosted']['database'] = 'bcitx762_comp4711';
+$db['hosted']['username'] = 'bcitx762_mno';
+$db['hosted']['password'] = 'MQ_Et8_I}lSv';
+$db['hosted']['database'] = 'bcitx762_mno';
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */
