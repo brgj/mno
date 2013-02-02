@@ -16,8 +16,8 @@ body { display: block; margin-left: 5%; margin-right:5%; padding: 0;
            top: auto; padding-right:5em;
 }
 #header { position: relative; margin-right: 1em;
-          background-image: url('/assets/images/banner2012.jpg');
-          background-repeat: repeat-x; height: 200px;
+          background-image: url('/assets/images/banner.jpg');
+          background-repeat: repeat-x; height: 250px;
 }
 #navbar { margin: 1em; float: left; text-align: left; width: 180px;
           display: block; background-color: #eefe80;}
