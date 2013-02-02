@@ -18,16 +18,12 @@ class Application extends CI_Controller {
 
     protected $choices = array(// our menu navbar
         array("href" => "/welcome", "title" => "Welcome to COMP4711", "label" => "Home", "tick" => ""),
-        array("href" => "#", "title" => "XML document", "label" => "Lab #3 (XML)", "tick" => ""),
-        array("href" => "#", "title" => "DTD constraints", "label" => "Lab #4 (DTD)", "tick" => ""),
-        array("href" => "#", "title" => "Schema constraints", "label" => "Lab #5 (schema)", "tick" => ""),
-        array("href" => "#", "title" => "SimpleXML processing", "label" => "Lab #6 (DOM)", "tick" => ""),
-        array("href" => "#", "title" => "CodeIgniter model", "label" => "Lab #7 (Model)", "tick" => ""),
-        array("href" => "#", "title" => "Add XPath expressions", "label" => "Lab #8 (XPath)", "tick" => ""),
-        array("href" => "#", "title" => "Server-side processing and data mods", "label" => "Lab #9 (Server)", "tick" => ""),
-        array("href" => "#", "title" => "XML-RPC client and server", "label" => "Lab #10 (RPC)", "tick" => ""),
-        array("href" => "#", "title" => "REST and JSON", "label" => "Lab #11 (REST)", "tick" => ""),
-        array("href" => "#", "title" => "REST error handling", "label" => "Lab #11B (Errors)", "tick" => "")
+        array("href" => "#", "title" => "", "label" => "Gneral Ledger", "tick" => ""),
+        array("href" => "#", "title" => "", "label" => "Accounts Payable", "tick" => ""),
+        array("href" => "#", "title" => "", "label" => "Accounts Receivable", "tick" => ""),
+        array("href" => "#", "title" => "", "label" => "Purchasing", "tick" => ""),
+        array("href" => "#", "title" => "", "label" => "Order Entry", "tick" => ""),
+        array("href" => "#", "title" => "", "label" => "Inventory control", "tick" => "")
     );
 
     /**
