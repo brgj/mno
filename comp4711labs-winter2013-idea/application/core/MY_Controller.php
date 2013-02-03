@@ -23,7 +23,7 @@ class Application extends CI_Controller {
         array("href" => "/ar/arwelcome", "title" => "", "label" => "Accounts Receivable", "tick" => ""),
         array("href" => "#", "title" => "", "label" => "Purchasing", "tick" => ""),
         array("href" => "/welcome_invoice", "title" => "", "label" => "Order Entry", "tick" => ""),
-        array("href" => "#", "title" => "", "label" => "Inventory Control", "tick" => "")
+        array("href" => "/ic/welcome", "title" => "", "label" => "Inventory Control", "tick" => "")
     );
 
     /**
