@@ -1,8 +1,8 @@
 <?php
 
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * View of general ledger
+ * @author : Tammy Hoang & Dylan Jack
  */
 ?>
 <div id="ledgerheader">General Ledger</div>
