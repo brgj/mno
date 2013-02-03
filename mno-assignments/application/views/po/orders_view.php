@@ -12,12 +12,14 @@ if (!defined('APPPATH'))
         <th>Vendor ID</th>
         <th>Vendor Name</th>
         <th>Order ID</th>
+        <th>Order Date</th>
     </tr>
     {orders}
     <tr>
         <td>{vID}</td>
         <td>{vendor}</td>
         <td>{orderID}</td>
+        <td>{orderDate}</td>
     </tr>
     {/orders}
 </table>
