@@ -16,14 +16,14 @@ class Add_order extends Application{
         $record = array('vID'=>'', 'vendor'=>'', 'orderID'=>'');
         $this->data = array_merge($this->data,$record);
         $this->data['pagetitle'] = "Add Order";
-        $this->data['pagebody'] = "add_order_form";
+        $this->data['pagebody'] = "po/add_order_form";
         $this->render();
     }
     
     function post()
     {        
         $this->orders->add($_POST);
-        redirect('/orders_control');     
+        redirect('/');     
     }
     
     
