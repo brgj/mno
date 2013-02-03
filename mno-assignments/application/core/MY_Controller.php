@@ -45,9 +45,26 @@ class Application extends CI_Controller {
         $this->data['menubar'] = $this->parser->parse('_menubar', $this->data, true);
         $this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
         $this->data['email'] = $this->properties->get('email');
+        $this->data['secondary'] = $this->make_secondary();
         $this->data['instructor'] = $this->properties->get('instructor');
         $this->data['data'] = &$this->data;
         $this->parser->parse('_template', $this->data);
+    }
+    
+    function make_secondary() {
+        
+        if (!isset($this->data['tabs']))
+            return "";
+        
+        $parms['tabs'] = array();
+        foreach ($this->data['tabs'] as $link => $desc) {
+            if ($this->data['selected'] == $link)
+                $code = 'class="selected"';
+            else
+                $code = '';
+            $parms['tabs'][] = array('link' => $link, 'desc' => $desc, 'selected' => $code);
+        }
+        return $this->parser->parse('_tabbed_menu', $parms, true);
     }
 
 

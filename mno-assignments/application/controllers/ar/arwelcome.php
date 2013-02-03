@@ -21,9 +21,10 @@ class Arwelcome extends Application {
      */
     function index() {
         
-        $this->data['selected'] = '/lab04/';
+        $this->data['selected'] = '/ar/arwelcome';
         $this->data['pagetitle'] = 'Massive Noob Obliterators';
         $this->data['pagebody'] = 'ar/arhome';
+        $this->data['customers'] = $this->customers->getAll_array();
         $this->render();
     }
     

@@ -5,7 +5,18 @@
  */
 ?>
 <div>
-    <h1>Accounts Receivable</h1>
-    </hr>
-    I really like pineapples.
+    <table cols="" border="0">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Customer Status</th>
+        </tr>
+        {customers}
+        <tr>
+            <td>{id}</td>
+            <td>{cust_name}</td>
+            <td>{status}</td>
+        </tr>
+        {/customers}
+    </table>
 </div>
