@@ -13,6 +13,8 @@
     echo form_input('vendor','{vendor}')."\r\n";
     echo form_label('Order ID', 'orderID');
     echo form_input('orderID', '{orderID}')."\r\n";
+    echo form_label('Order Date', 'orderDate');
+    echo form_input('orderDate', '{orderDate}')."\r\n";
     
     echo form_submit(null, 'Submit');
     echo form_close();
