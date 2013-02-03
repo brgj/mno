@@ -30,7 +30,7 @@ class Add_order extends Application {
 
     function post() {
         $this->orders->add($_POST);
-        redirect('/orders_control');
+        redirect('/');
     }
 
 }
