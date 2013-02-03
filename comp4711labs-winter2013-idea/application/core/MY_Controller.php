@@ -18,12 +18,12 @@ class Application extends CI_Controller {
 
     protected $choices = array(// our menu navbar
         array("href" => "/welcome", "title" => "Welcome to COMP4711", "label" => "Home", "tick" => ""),
-        array("href" => "#", "title" => "", "label" => "Gneral Ledger", "tick" => ""),
+        array("href" => "#", "title" => "", "label" => "General Ledger", "tick" => ""),
         array("href" => "#", "title" => "", "label" => "Accounts Payable", "tick" => ""),
         array("href" => "/ar/arwelcome", "title" => "", "label" => "Accounts Receivable", "tick" => ""),
         array("href" => "#", "title" => "", "label" => "Purchasing", "tick" => ""),
-        array("href" => "#", "title" => "", "label" => "Order Entry", "tick" => ""),
-        array("href" => "#", "title" => "", "label" => "Inventory control", "tick" => "")
+        array("href" => "/welcome_invoice", "title" => "", "label" => "Order Entry", "tick" => ""),
+        array("href" => "#", "title" => "", "label" => "Inventory Control", "tick" => "")
     );
 
     /**
@@ -43,7 +43,6 @@ class Application extends CI_Controller {
     function render() {
         $this->data['choices'] = $this->choices;
         $this->data['menubar'] = $this->parser->parse('_menubar', $this->data, true);
-
         $this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
         $this->data['email'] = $this->properties->get('email');
         $this->data['instructor'] = $this->properties->get('instructor');
