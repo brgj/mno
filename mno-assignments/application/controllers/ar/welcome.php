@@ -1,15 +1,21 @@
 <?php
+
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 /**
  * Default controller for COMP4711 Lab Solutions
  */
-class Arwelcome extends Application {
+class Welcome extends Application {
 
     // sets up the tabs for displaying the data
+<<<<<<< HEAD:mno-assignments/application/controllers/ar/arwelcome.php
     var $tabs = array('/ar/arwelcome' => 'Accounts Receivable', '/ar/add_customer' => 'Add Customer');
     
+=======
+    var $tabs = array('/ar/welcome' => 'Accounts Receivable');
+
+>>>>>>> 111d262f36b741599e4ea6ad2c918d77ecf636c4:mno-assignments/application/controllers/ar/welcome.php
     function __construct() {
         parent::__construct();
         $this->data['tabs'] = $this->tabs;
@@ -20,16 +26,15 @@ class Arwelcome extends Application {
      * Yes, we are using view templating.
      */
     function index() {
-        
-        $this->data['selected'] = '/ar/arwelcome';
-        $this->data['pagetitle'] = 'Massive Noob Obliterators';
-        $this->data['pagebody'] = 'ar/arhome';
+
+        $this->data['selected'] = '/ar/welcome';
+        $this->data['pagetitle'] = 'Massive Noob Obliterators - Accounts Receivable';
+        $this->data['pagebody'] = 'ar/home';
         $this->data['customers'] = $this->customers->getAll_array();
         $this->render();
     }
-    
-    function add_customers()
-    {
+
+    function add_customers() {
         
     }
 

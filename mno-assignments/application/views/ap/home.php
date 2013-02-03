@@ -11,22 +11,23 @@ if (!defined('APPPATH'))
  * ------------------------------------------------------------------------
  */
 ?>
-
 <table cols="" border="0">
     <tr>
         <th>ID</th>
-        <th>Customer</th>
-        <th>Order Description</th>
-        <th>Order Status</th>
-        <th>Order Date</th>
+        <th>Description/Name</th>
+        <th>Amount</th>
+        <th>Status</th>
+        <th>Phone</th>
+        <td>E-mail</td>
     </tr>
-    {invoice}
+    {vendors}
     <tr>
         <td>{id}</td>
-        <td>{customer}</td>
         <td>{description}</td>
+        <td>{amount}</td>
         <td>{status}</td>
-        <td>{order_date}</td>
+        <td>{phone}</td>
+        <td>{email}</td>
     </tr>
-    {/invoice}
+    {/vendors}
 </table>

@@ -12,9 +12,10 @@
  */
 class Update_invoice extends Application{
     function index() {
+        $this->data['pagetitle'] = 'Massive Noob Obliterators - Update Invoice';
         $record = array('id'=>'', 'customer'=>'', 'description'=>'', 'status'=>'', 'order_date'=>'');
         $this->data = array_merge($this->data,$record);//'initializes' array to empty values so we don't see template stuff.
-        $this->data['pagebody'] = "oe/update_form";
+        $this->data['pagebody'] = "update_form";
         $this->render();
     }
     function post() {

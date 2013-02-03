@@ -45,6 +45,7 @@ class add_vendor
      * page.
      */
     function index() {
+        $this->data['pagetitle'] = 'Massive Noob Obliterators - Add Vendor';
         $this->data['pagebody'] = "add_vendor_form";
         $record = array('id'=>'','description'=>'', 'amount'=>'', 'status'=>'', 'phone'=>'', 'email'=>'');
         $this->data = array_merge($this->data,$record);

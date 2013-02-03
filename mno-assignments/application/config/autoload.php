@@ -55,7 +55,7 @@ $autoload['packages'] = array(APPPATH . 'third_party');
   |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
  */
 
-$autoload['libraries'] = array('parser','database');
+$autoload['libraries'] = array('parser', 'database');
 
 
 /*
@@ -112,7 +112,9 @@ $autoload['language'] = array();
   |
  */
 
-$autoload['model'] = array('properties', '_mymodel','invoice', 'vendors', 'inventory', 'customers');
+
+$autoload['model'] = array('properties', '_mymodel', 'invoice', 'vendors', 'inventory', 'customers', 'ledger', 'orders');
+
 
 
 /* End of file autoload.php */

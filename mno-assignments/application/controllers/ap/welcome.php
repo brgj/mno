@@ -14,21 +14,23 @@ if (!defined('APPPATH'))
 class Welcome extends Application {
 
     // sets up the tabs for displaying the data
-    var $tabs = array('/oe/welcome' => 'Order Entry',
-        '/oe/add_invoice' => 'Add Invoice', //adds 'add contact' button to menu.
-        '/oe/update_invoice' => 'Update Invoice' //adds 'add contact' button to menu.
-    );
+    var $tabs = array('/ap/welcome' => 'Accounts Payable');
 
     function __construct() {
         parent::__construct();
         $this->data['tabs'] = $this->tabs;
     }
 
+    /**
+     * Sets up the vendors information from the database.
+     * Calls the parent's render function to set up
+     * any other relevant information to be displayed.
+     */
     function index() {
-        $this->data['selected'] = '/oe/welcome';
-        $this->data['pagetitle'] = 'Massive Noob Obliterators - Order Entry';
-        $this->data['pagebody'] = 'oe/home';
-        $this->data['invoice'] = $this->invoice->getAll_array();
+        $this->data['selected'] = '/ap/welcome';
+        $this->data['pagebody'] = "/ap/home";
+        $this->data['pagetitle'] = 'Massive Noob Obliterators - Accounts Payable';
+        $this->data['vendors'] = $this->vendors->getAll_array();
         $this->render();
     }
 

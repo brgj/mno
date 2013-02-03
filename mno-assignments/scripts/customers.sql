@@ -9,7 +9,7 @@ CREATE TABLE customers (
 INSERT INTO customers (id, cust_name, status)
     VALUES
     ('510','Noble Six','A'),
-    ('511','Master Cheif','A'),
+    ('511','Master Chief','A'),
     ('512','Jacob Keyes','A'),
     ('513','Sarah Palmer','A'),
     ('514','Thomas Lasky','A'),

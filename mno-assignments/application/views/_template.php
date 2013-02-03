@@ -23,7 +23,7 @@ _<?php
                 {content}
             </div>
             <div id="footer">
-                <p>Comp4711 solution provided by <a href="mailto:{email}">{instructor}</a>.</p>
+                <p>COMP 4711 - <a href="mailto:{email}">{team}</a>.</p>
             </div>
 
         </div>
