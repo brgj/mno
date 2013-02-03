@@ -15,8 +15,8 @@ class Welcome extends Application {
 
     // sets up the tabs for displaying the data
     var $tabs = array('/oe/welcome' => 'Order Entry',
-        '/oe/add_invoice' => 'Add Invoice', //adds 'add contact' button to menu.
-        '/oe/update_invoice' => 'Update Invoice' //adds 'add contact' button to menu.
+        '/oe/add_invoice' => 'Add Invoice', //adds 'add invoice' button to menu.
+        '/oe/update_invoice' => 'Update Invoice' //adds 'update invoice' button to menu.
     );
 
     function __construct() {

@@ -21,4 +21,3 @@ if (!defined('APPPATH'))
     </tr>
     {/orders}
 </table>
-<a  href="/po/add_order">Add Order</a>

@@ -21,7 +21,7 @@ class Application extends CI_Controller {
         array("href" => "/gl/welcome", "title" => "", "label" => "General Ledger", "tick" => ""),
         array("href" => "/ap/welcome", "title" => "", "label" => "Accounts Payable", "tick" => ""),
         array("href" => "/ar/welcome", "title" => "", "label" => "Accounts Receivable", "tick" => ""),
-        array("href" => "/po/orders_control", "title" => "", "label" => "Purchasing", "tick" => ""),
+        array("href" => "/po/welcome", "title" => "", "label" => "Purchasing", "tick" => ""),
         array("href" => "/oe/welcome", "title" => "", "label" => "Order Entry", "tick" => ""),
         array("href" => "/ic/welcome", "title" => "", "label" => "Inventory Control", "tick" => "")
     );
@@ -46,7 +46,7 @@ class Application extends CI_Controller {
         $this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
         $this->data['email'] = $this->properties->get('email');
         $this->data['secondary'] = $this->make_secondary();
-        $this->data['instructor'] = $this->properties->get('instructor');
+        $this->data['team'] = $this->properties->get('team');
         $this->data['data'] = &$this->data;
         $this->parser->parse('_template', $this->data);
     }

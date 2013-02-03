@@ -10,17 +10,30 @@
  *
  * @author Rian
  */
-class Update_invoice extends Application{
+class Update_invoice extends Application {
+
+    var $tabs = array('/oe/welcome' => 'Order Entry',
+        '/oe/add_invoice' => 'Add Invoice', //adds 'add invoice' button to menu.
+        '/oe/update_invoice' => 'Update Invoice' //adds 'update invoice' button to menu.
+    );
+
+    function __construct() {
+        parent::__construct();
+        $this->data['tabs'] = $this->tabs;
+    }
+
     function index() {
+        $this->data['selected'] = '/oe/update_invoice';
         $this->data['pagetitle'] = 'Massive Noob Obliterators - Update Invoice';
-        $record = array('id'=>'', 'customer'=>'', 'description'=>'', 'status'=>'', 'order_date'=>'');
-        $this->data = array_merge($this->data,$record);//'initializes' array to empty values so we don't see template stuff.
-        $this->data['pagebody'] = "update_form";
+        $record = array('id' => '', 'customer' => '', 'description' => '', 'status' => '', 'order_date' => '');
+        $this->data = array_merge($this->data, $record); //'initializes' array to empty values so we don't see template stuff.
+        $this->data['pagebody'] = "oe/update_form";
         $this->render();
     }
+
     function post() {
-        $this->load->helper('oe/validate');//loads validation_helper.php (where validation functions are stored)
-        $new_id = $_POST['id'];//check to see if record exists in database
+        $this->load->helper('oe/validate'); //loads validation_helper.php (where validation functions are stored)
+        $new_id = $_POST['id']; //check to see if record exists in database
         if ($this->invoice->get($new_id) == null) {
             $this->data['errors'][] = 'invoice ID doesn\'t exist.';
         }
@@ -35,12 +48,12 @@ class Update_invoice extends Application{
         }
         if (count($this->data['errors']) > 0) {//if theres errors display them but don't redirect back to main
             $this->index();
-        }
-        else
-        {
-            $this->invoice->update($_POST);//all is good add contact...
-            redirect("/");//... and redirect back to main
+        } else {
+            $this->invoice->update($_POST); //all is good add contact...
+            redirect("/"); //... and redirect back to main
         }
     }
+
 }
+
 ?>
