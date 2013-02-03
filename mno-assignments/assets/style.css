@@ -26,40 +26,15 @@ body { display: block; margin-left: 5%; margin-right:5%; padding: 0;
            text-align: left; margin-left:200px;}
 #footer {text-align:center; font-style: italic; font-size: 90%;
          display:block; clear:left;}
-#ledgerheader{font-size: 50px;color: pink;text-align: center;}
-
-#ledgertable
-{
-	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-	font-size: 16px;
-	margin: 45px;
-	width: 500px;
-	text-align: left;
-	border-collapse: collapse;
-}
-#ledgertable th
-{
-	font-weight: normal;
-	padding: 8px;
-	background: #b9c9fe;
-	border-top: 4px solid #aabcfe;
-	border-bottom: 1px solid #fff;
-	color: #039;
-}
-#ledgertable td
-{
-	padding: 8px;
-	background: #e8edff; 
-	border-bottom: 1px solid #fff;
-	color: #669;
-	border-top: 1px solid transparent;
-}
-#ledgertable tr:hover td
-{
-	background: #d0dafd;
-	color: #339;
-}
-
+#ledgerheader{font-size: 50px;color: #e658a8;text-align: center;}
+#ledgertable{font-size: 16px;margin: 45px;width: 500px;text-align: left;
+             border-collapse: collapse;}
+#ledgertable th{font-weight: normal;padding: 8px;background: #b4f299;
+	border-top: 4px solid #cefeaa;border-bottom: 1px solid #fff;
+        color: #268202;}
+#ledgertable td{padding: 8px;background: #e8ffeb;border-bottom: 1px solid #fff;
+	color: #6b9966;border-top: 1px solid transparent;}
+#ledgertable tr:hover td{background: #b4f299;color: #268202;}
 h1 {font-weight: bold; font-size: 125%; text-align:left;}
 h2 {font-weight: bold; font-size: 110%;  text-align:left;}
 img, a.img {border: none; border-bottom-style: none;}

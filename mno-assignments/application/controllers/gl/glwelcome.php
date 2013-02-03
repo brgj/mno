@@ -3,7 +3,8 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 /**
- * Default controller for COMP4711 Lab Solutions
+ * General Ledger controller for COMP 4711 assignment1
+ * @author Tammy Hoang & Dylan Jack
  */
 class Glwelcome extends Application {
 
@@ -13,7 +14,8 @@ class Glwelcome extends Application {
 
     /**
      * Default entry point.
-     * Yes, we are using view templating.
+     * This function is to load data from the database file, in this case
+     * is ledger.sql
      */
     function index()  {
         $this->data['pagetitle'] = 'Massive Noob Obliterators';
