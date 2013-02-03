@@ -9,13 +9,9 @@ if (!defined('BASEPATH'))
 class Welcome extends Application {
 
     // sets up the tabs for displaying the data
-<<<<<<< HEAD:mno-assignments/application/controllers/ar/arwelcome.php
-    var $tabs = array('/ar/arwelcome' => 'Accounts Receivable', '/ar/add_customer' => 'Add Customer');
+    var $tabs = array('/ar/welcome' => 'Accounts Receivable', '/ar/add_customer' => 'Add Customer');
     
-=======
-    var $tabs = array('/ar/welcome' => 'Accounts Receivable');
 
->>>>>>> 111d262f36b741599e4ea6ad2c918d77ecf636c4:mno-assignments/application/controllers/ar/welcome.php
     function __construct() {
         parent::__construct();
         $this->data['tabs'] = $this->tabs;
