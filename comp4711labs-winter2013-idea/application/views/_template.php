@@ -19,6 +19,7 @@ _<?php
                 {menubar}
             </div>
             <div id="content">
+                {secondary}
                 {content}
             </div>
             <div id="footer">
