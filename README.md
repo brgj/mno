@@ -11,7 +11,7 @@ mno
 
 ```git commit -m "message"``` - Commits all added files to your local branch
 
-```git pull origin master``` - Pulls any updates from upstream to your local branch
+```git pull origin``` - Pulls any updates from upstream to your local branch
 
 ```git push origin master``` - Pushes your changes upstream to the repository, make sure that you have pulled and are completely up to date before you push
 
