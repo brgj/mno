@@ -18,7 +18,7 @@ class Application extends CI_Controller {
 
     protected $choices = array(// our menu navbar
         array("href" => "/welcome", "title" => "Welcome to COMP4711", "label" => "Home", "tick" => ""),
-        array("href" => "#", "title" => "", "label" => "General Ledger", "tick" => ""),
+        array("href" => "/gl/glwelcome", "title" => "", "label" => "General Ledger", "tick" => ""),
         array("href" => "#", "title" => "", "label" => "Accounts Payable", "tick" => ""),
         array("href" => "/ar/arwelcome", "title" => "", "label" => "Accounts Receivable", "tick" => ""),
         array("href" => "#", "title" => "", "label" => "Purchasing", "tick" => ""),
@@ -69,6 +69,3 @@ class Application extends CI_Controller {
 
 
 }
-
-/* End of file MY_Controller.php */
-/* Location: application/core/MY_Controller.php */
