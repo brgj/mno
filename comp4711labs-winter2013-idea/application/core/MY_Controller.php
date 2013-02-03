@@ -23,7 +23,7 @@ class Application extends CI_Controller {
         array("href" => "/ar/arwelcome", "title" => "", "label" => "Accounts Receivable", "tick" => ""),
         array("href" => "#", "title" => "", "label" => "Purchasing", "tick" => ""),
         array("href" => "#", "title" => "", "label" => "Order Entry", "tick" => ""),
-        array("href" => "#", "title" => "", "label" => "Inventory control", "tick" => "")
+        array("href" => "/ic/welcome", "title" => "", "label" => "Inventory control", "tick" => "")
     );
 
     /**
@@ -43,12 +43,30 @@ class Application extends CI_Controller {
     function render() {
         $this->data['choices'] = $this->choices;
         $this->data['menubar'] = $this->parser->parse('_menubar', $this->data, true);
+        
+        $this->data['secondary'] = $this->make_secondary();
 
         $this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
         $this->data['email'] = $this->properties->get('email');
         $this->data['instructor'] = $this->properties->get('instructor');
         $this->data['data'] = &$this->data;
         $this->parser->parse('_template', $this->data);
+    }
+    
+    function make_secondary() {
+        
+        if (!isset($this->data['tabs']))
+            return "";
+        
+        $parms['tabs'] = array();
+        foreach ($this->data['tabs'] as $link => $desc) {
+            if ($this->data['selected'] == $link)
+                $code = 'class="selected"';
+            else
+                $code = '';
+            $parms['tabs'][] = array('link' => $link, 'desc' => $desc, 'selected' => $code);
+        }
+        return $this->parser->parse('_tabbed_menu', $parms, true);
     }
 
 
