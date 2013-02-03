@@ -23,4 +23,4 @@ class Orders extends _Mymodel {
  }
 
 /* End of file orders.php */
-/* Location: application/models/orders.php */
+/* Location: application/models/po/orders.php */
