@@ -6,7 +6,7 @@
  */
 ?>
 <div id="ledgerheader">General Ledger</div>
-<table cols="" border="0">
+<table cols="" border="0" id="ledgertable">
     <tr>
         <th>Account number</th>
         <th>Account name</th>
