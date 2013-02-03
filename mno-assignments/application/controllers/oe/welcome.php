@@ -14,8 +14,8 @@ if (!defined('APPPATH'))
 class Welcome extends Application {
     
     protected $options = array(// our options bar
-        'Add Invoice' => '/add_invoice',//adds 'add contact' button to menu.
-        'Update Invoice' => '/update_invoice'//adds 'add contact' button to menu.
+        'Add Invoice' => '/oe/add_invoice',//adds 'add contact' button to menu.
+        'Update Invoice' => '/oe/update_invoice'//adds 'add contact' button to menu.
     );
 
     function index() {
