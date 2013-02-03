@@ -10,18 +10,18 @@
  *
  * @author Rian
  */
-class Add_invoice extends Application{
+class Update_invoice extends Application{
     function index() {
         $record = array('id'=>'', 'customer'=>'', 'description'=>'', 'status'=>'', 'order_date'=>'');
         $this->data = array_merge($this->data,$record);//'initializes' array to empty values so we don't see template stuff.
-        $this->data['pagebody'] = "add_form";
+        $this->data['pagebody'] = "oe/update_form";
         $this->render();
     }
     function post() {
-        $this->load->helper('invoice_validation');//loads validation_helper.php (where validation functions are stored)
+        $this->load->helper('oe/validate');//loads validation_helper.php (where validation functions are stored)
         $new_id = $_POST['id'];//check to see if record exists in database
-        if ($this->invoice->get($new_id) != null) {
-            $this->data['errors'][] = 'invoice ID already used.';
+        if ($this->invoice->get($new_id) == null) {
+            $this->data['errors'][] = 'invoice ID doesn\'t exist.';
         }
         if (!validate_customer($_POST['customer'])) {
             $this->data['errors'][] = 'customer named is FUUUUCKEd. lol.';
@@ -37,7 +37,7 @@ class Add_invoice extends Application{
         }
         else
         {
-            $this->invoice->add($_POST);//all is good add contact...
+            $this->invoice->update($_POST);//all is good add contact...
             redirect("/");//... and redirect back to main
         }
     }

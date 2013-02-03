@@ -11,7 +11,7 @@ if (!defined('APPPATH'))
  * @author		JLP
  * ------------------------------------------------------------------------
  */
-class Welcome_invoice extends Application {
+class Welcome extends Application {
     
     protected $options = array(// our options bar
         'Add Invoice' => '/add_invoice',//adds 'add contact' button to menu.
@@ -20,7 +20,7 @@ class Welcome_invoice extends Application {
 
     function index() {
         $this->data['pagetitle'] = 'Order Entry';
-        $this->data['pagebody'] = 'invoice';
+        $this->data['pagebody'] = 'oe/home';
         $this->data['invoice'] = $this->invoice->getAll_array();
         $this->data['optionbar'] = build_menu_bar($this->options);
         $this->render();

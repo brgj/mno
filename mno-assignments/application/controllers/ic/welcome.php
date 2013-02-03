@@ -18,7 +18,7 @@ class Welcome extends Application {
      */
     function index() {
         $this->data['pagetitle'] = 'COMP4711 - Winter 2013 - Lab Ideas';
-        $this->data['pagebody'] = 'home';
+        $this->data['pagebody'] = 'ic/home.php';
         $this->data['inventory'] = $this->inventory->getAll_array();
         $this->render();
     }

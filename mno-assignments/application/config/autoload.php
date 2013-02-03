@@ -67,7 +67,7 @@ $autoload['libraries'] = array('parser','database');
   |	$autoload['helper'] = array('url', 'file');
  */
 
-$autoload['helper'] = array('common', 'display', 'url', 'invoice_validation');
+$autoload['helper'] = array('common', 'display', 'url', 'oe/validate');
 
 
 /*
@@ -112,7 +112,7 @@ $autoload['language'] = array();
   |
  */
 
-$autoload['model'] = array('properties', '_mymodel','invoice' );
+$autoload['model'] = array('properties', '_mymodel','invoice', 'vendors', 'inventory' );
 
 
 /* End of file autoload.php */
