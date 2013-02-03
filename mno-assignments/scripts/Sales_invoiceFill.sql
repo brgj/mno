@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS sales_invoice;
 CREATE TABLE sales_invoice 
 (
 `id` int(3) NOT NULL,
-`customer` int(80), --customer account code, fucking guy.
+`customer` int(80),
 `description` varchar(80),
 `status` char(1),
 `order_date` varchar(10),
