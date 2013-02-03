@@ -12,17 +12,23 @@ if (!defined('APPPATH'))
  * ------------------------------------------------------------------------
  */
 class Welcome extends Application {
-    
-    protected $options = array(// our options bar
-        'Add Invoice' => '/oe/add_invoice',//adds 'add contact' button to menu.
-        'Update Invoice' => '/oe/update_invoice'//adds 'add contact' button to menu.
+
+    // sets up the tabs for displaying the data
+    var $tabs = array('/oe/welcome' => 'Order Entry',
+        '/oe/add_invoice' => 'Add Invoice', //adds 'add contact' button to menu.
+        '/oe/update_invoice' => 'Update Invoice' //adds 'add contact' button to menu.
     );
 
+    function __construct() {
+        parent::__construct();
+        $this->data['tabs'] = $this->tabs;
+    }
+
     function index() {
-        $this->data['pagetitle'] = 'Order Entry';
+        $this->data['selected'] = '/oe/welcome';
+        $this->data['pagetitle'] = 'Massive Noob Obliterators - Order Entry';
         $this->data['pagebody'] = 'oe/home';
         $this->data['invoice'] = $this->invoice->getAll_array();
-        $this->data['optionbar'] = build_menu_bar($this->options);
         $this->render();
     }
 

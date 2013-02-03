@@ -11,21 +11,25 @@ if (!defined('APPPATH'))
  * @author		JLP
  * ------------------------------------------------------------------------
  */
-class Welcome 
-    extends Application 
-{
+class Welcome extends Application {
+
+    // sets up the tabs for displaying the data
+    var $tabs = array('/ap/welcome' => 'Accounts Payable');
 
     function __construct() {
         parent::__construct();
+        $this->data['tabs'] = $this->tabs;
     }
-    
+
     /**
      * Sets up the vendors information from the database.
      * Calls the parent's render function to set up
      * any other relevant information to be displayed.
      */
     function index() {
+        $this->data['selected'] = '/ap/welcome';
         $this->data['pagebody'] = "/ap/home";
+        $this->data['pagetitle'] = 'Massive Noob Obliterators - Accounts Payable';
         $this->data['vendors'] = $this->vendors->getAll_array();
         $this->render();
     }

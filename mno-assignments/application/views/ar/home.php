@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The main page of the AR section.
  */

@@ -8,8 +8,12 @@ if (!defined('BASEPATH'))
  */
 class Welcome extends Application {
 
+    // sets up the tabs for displaying the data
+    var $tabs = array('/ic/welcome' => 'Inventory Control');
+
     function __construct() {
         parent::__construct();
+        $this->data['tabs'] = $this->tabs;
     }
 
     /**
@@ -17,7 +21,8 @@ class Welcome extends Application {
      * Yes, we are using view templating.
      */
     function index() {
-        $this->data['pagetitle'] = 'COMP4711 - Winter 2013 - Lab Ideas';
+        $this->data['selected'] = '/ic/welcome';
+        $this->data['pagetitle'] = 'Massive Noob Obliterators - Inventory Control';
         $this->data['pagebody'] = 'ic/home.php';
         $this->data['inventory'] = $this->inventory->getAll_array();
         $this->render();

@@ -13,6 +13,7 @@
 class Add_inventory extends Application {
 
     function index() {
+        $this->data['pagetitle'] = 'Massive Noob Obliterators - Add Inventory';
         $this->data['pagebody'] = "add_inventory";
         /* Sets defualt valuse to blank so it looks pretty */
         $record = array('id' => '', 'model' => '', 'brand' => '', 'type' => '', 'quantity' => '');
