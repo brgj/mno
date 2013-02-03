@@ -6,7 +6,7 @@
  * order form View
  */
     $this->load->helper('form');
-    echo form_open('po/add_order/post');
+    echo form_open('/po/add_order/post');
     echo form_label('Vendor','vID');
     echo form_input('vID','{vID}')."\r\n";
     echo form_label('Vendor Name','vendor');
