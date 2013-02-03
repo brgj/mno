@@ -20,7 +20,7 @@ class Application extends CI_Controller {
         array("href" => "/welcome", "title" => "Welcome to COMP4711", "label" => "Home", "tick" => ""),
         array("href" => "#", "title" => "", "label" => "Gneral Ledger", "tick" => ""),
         array("href" => "#", "title" => "", "label" => "Accounts Payable", "tick" => ""),
-        array("href" => "#", "title" => "", "label" => "Accounts Receivable", "tick" => ""),
+        array("href" => "/ar/arwelcome", "title" => "", "label" => "Accounts Receivable", "tick" => ""),
         array("href" => "#", "title" => "", "label" => "Purchasing", "tick" => ""),
         array("href" => "#", "title" => "", "label" => "Order Entry", "tick" => ""),
         array("href" => "#", "title" => "", "label" => "Inventory control", "tick" => "")

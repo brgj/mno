@@ -17,7 +17,7 @@ class Welcome extends Application {
      * Yes, we are using view templating.
      */
     function index() {
-        $this->data['pagetitle'] = 'COMP4711 - Winter 2013 - Lab Ideas';
+        $this->data['pagetitle'] = 'Massive Noob Obliterators';
         $this->data['pagebody'] = 'home';
         $this->render();
     }
