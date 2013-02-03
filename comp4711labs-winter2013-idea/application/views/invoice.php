@@ -11,6 +11,11 @@ if (!defined('APPPATH'))
  * ------------------------------------------------------------------------
  */
 ?>
+
+
+<div id="options">
+    {optionbar}
+</div>
 <table cols="" border="0">
     <tr>
         <th>ID</th>
