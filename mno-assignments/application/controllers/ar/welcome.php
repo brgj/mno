@@ -9,8 +9,7 @@ if (!defined('BASEPATH'))
 class Welcome extends Application {
 
     // sets up the tabs for displaying the data
-    var $tabs = array('/ar/welcome' => 'Accounts Receivable', '/ar/add_customer' => 'Add Customer');
-    
+        var $tabs = array('/ar/welcome' => 'Accounts Receivable', '/ar/add_customer' => 'Add Customer', '/ar/update' => 'Update Customer');
 
     function __construct() {
         parent::__construct();

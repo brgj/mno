@@ -10,7 +10,6 @@
 <div>
     <form action="/ar/add_customer/post" method="post">
         <p>
-
             <label for="id">Customer ID</label>
             <input type="text" name="id" id="id" value="{id}"/>
         </p>

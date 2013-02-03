@@ -9,12 +9,16 @@
             <th>ID</th>
             <th>Name</th>
             <th>Status</th>
+            <th></th>
+            <th></th>
         </tr>
         {customers}
         <tr>
             <td>{id}</td>
             <td>{cust_name}</td>
             <td>{status}</td>
+            <td></td>
+            <td></td>
         </tr>
         {/customers}
     </table>
