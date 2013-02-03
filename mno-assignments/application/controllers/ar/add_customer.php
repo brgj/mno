@@ -12,7 +12,7 @@
  */
 class Add_Customer extends Application{
     
-    var $tabs = array('/ar/arwelcome' => 'Accounts Receivable', '/ar/add_customer' => 'Add Customer');
+    var $tabs = array('/ar/welcome' => 'Accounts Receivable', '/ar/add_customer' => 'Add Customer');
     
     function __construct() {
         parent::__construct();
@@ -35,7 +35,7 @@ class Add_Customer extends Application{
     {
         $new_id = $_POST['id'];
         
-        if($this->customer->get($new_id) != null)
+        if($this->customers->get($new_id) != null)
         {
             $this->data['errors'][]= 'This ID is already being used';
         }
@@ -52,9 +52,9 @@ class Add_Customer extends Application{
             $this->index();
         } else {
             /* All field filled, add item */
-            $this->inventory->add($_POST);
+            $this->customers->add($_POST);
             /* redirect back to main */
-            redirect("/");
+            redirect("/ar/welcome");
         }
     }
 }
