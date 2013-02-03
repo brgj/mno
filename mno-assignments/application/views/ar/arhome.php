@@ -9,7 +9,7 @@
         <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Customer Status</th>
+            <th>Status</th>
         </tr>
         {customers}
         <tr>

@@ -8,7 +8,7 @@ if (!defined('BASEPATH'))
 class Arwelcome extends Application {
 
     // sets up the tabs for displaying the data
-    var $tabs = array('/ar/arwelcome' => 'Accounts Receivable');
+    var $tabs = array('/ar/arwelcome' => 'Accounts Receivable', '/ar/add_customer' => 'Add Customer');
     
     function __construct() {
         parent::__construct();
