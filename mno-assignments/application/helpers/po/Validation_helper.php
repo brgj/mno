@@ -19,5 +19,13 @@ function date_validation($date)
          return false;
      }     
 }
+function orderID_validation($orderID)
+{     
+     if(preg_match('^[0-9]{1,10}$', $orderID)){
+         return true;
+     }else{
+         return false;
+     }     
+}
 
 ?>
