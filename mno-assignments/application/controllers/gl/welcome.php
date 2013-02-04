@@ -10,7 +10,7 @@ if (!defined('BASEPATH'))
 class Welcome extends Application {
 
     // sets up the tabs for displaying the data
-    var $tabs = array('/gl/welcome' => 'General Ledger');
+    var $tabs = array('/gl/welcome' => 'General Ledger', '/gl/add_account' => 'Add Account', '/gl/update_account' => 'Update Account');
 
     function __construct() {
         parent::__construct();
@@ -31,3 +31,6 @@ class Welcome extends Application {
     }
 
 }
+
+/* End of file welcome.php */
+/* Location: application/controllers/welcome.php */

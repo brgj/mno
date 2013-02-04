@@ -7,17 +7,15 @@
 ?>
 <table cols="" border="0" id="ledgertable">
     <tr>
-        <th>Account number</th>
+        <th>Account id</th>
         <th>Account name</th>
-        <th>Debit</th>
-        <th>Credit</th>
+        <th>Status</th>
     </tr>
     {ledger}
     <tr>
         <td>{accountno}</td>
         <td>{accountname}</td>
-        <td>{debit}</td>
-        <td>{credit}</td>
+        <td>{status}</td>
     </tr>
     {/ledger}
 </table>
