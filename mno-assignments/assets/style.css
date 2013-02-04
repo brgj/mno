@@ -1,14 +1,6 @@
-/* 
-    Document   : style
-    Created on : Jan 17, 2011, 12:01:28 PM
-    Author     : Jim
-    Description:
-        Purpose of the stylesheet follows.
-*/
-
 body { display: block; margin-left: 5%; margin-right:5%; padding: 0; 
        width: 960px; font-family: verdana, tahoma, helvetica, arial, sans-serif;
-       text-align: left; color: black; font-size: 12pt;
+       text-align: left; color:#b6bcb6; font-size: 12pt; background-color: #232323;
 }
 
 #wrapper { display: block; clear: none; margin-right: 1em;
@@ -20,43 +12,35 @@ body { display: block; margin-left: 5%; margin-right:5%; padding: 0;
           background-repeat: repeat-x; height: 250px;
 }
 #navbar { margin: 1em; float: left; text-align: left; width: 180px;
-          display: block; background-color: #eefe80;}
-#navbar li { list-style: none;}
+          display: block; background-color: #232323;}
+#navbar li { list-style: none; color: #b6bcb6}
 #content { display: block; position: relative; margin: 1em;
            text-align: left; margin-left:200px;}
 #footer {text-align:center; font-style: italic; font-size: 90%;
          display:block; clear:left;}
-#ledgerheader{font-size: 50px;color: #e658a8;text-align: center;}
-#ledgertable{font-size: 16px;margin: 45px;width: 500px;text-align: left;
-             border-collapse: collapse;}
-#ledgertable th{font-weight: normal;padding: 8px;background: #b4f299;
-	border-top: 4px solid #cefeaa;border-bottom: 1px solid #fff;
-        color: #268202;}
-#ledgertable td{padding: 8px;background: #e8ffeb;border-bottom: 1px solid #fff;
-	color: #6b9966;border-top: 1px solid transparent;}
-#ledgertable tr:hover td{background: #b4f299;color: #268202;}
-h1 {font-weight: bold; font-size: 125%; text-align:left;}
-h2 {font-weight: bold; font-size: 110%;  text-align:left;}
+
+h1 {font-weight: bold; font-size: 125%; text-align:left; color: #7dff89}
+h2 {font-weight: bold; font-size: 110%;  text-align:left; color: #7dff89}
 img, a.img {border: none; border-bottom-style: none;}
 
-.title {float:right; margin-top: 4.5em; color: #402020;
+.title {float:right; margin-top: 4.5em; color: #7dff89;
         font-size:150%;font-weight:bold;}
 
 pre {font-size: 80%;}
-.panel {overflow: auto; height: 300px; width:700px; border:dotted 1px #003399;}
+.panel {overflow: auto; height: 300px; width:700px; border:dotted 1px #7dff89;}
 
 /* CSS Tabs from www.dynamicdrive.com */
 .basictab{padding: 3px 0; margin-left: 0; font: bold 12px Verdana;
           border-bottom: 1px solid gray; list-style-type: none; text-align: left; }
 .basictab li{display: inline; margin: 0;}
 .basictab li a{text-decoration: none; padding: 3px 7px; margin-right: 3px;
-               border: 1px solid gray; border-bottom: none; background-color: #f6ffd5;
+               border: 1px solid gray; border-bottom: none; background-color: #b6bcb6;
                color: #2d2b2b;}
 .basictab li a:visited{color: #2d2b2b;}
-.basictab li a:hover{background-color: #DBFF6C; color: black;}
+.basictab li a:hover{background-color: #b6bcb6; color: black;}
 .basictab li a:active{color: black;}
 .basictab li.selected a{position: relative; top: 1px; padding-top: 4px; 
-                        background-color: #DBFF6C; color: black;}
+                        background-color: #3e6447; color: white;}
 
 .report {text-align:right;}
 
@@ -68,3 +52,10 @@ pre {font-size: 80%;}
 .report_minor td {text-align:right;}
 .report_bottom td:first-of-type {text-align:center;}
 .report_bottom td {text-align:right;font-size: 120%; font-weight: bold}
+
+/*
+Customizing Links
+*/
+a:link{color: #b6bcb6;}
+a:visited{color: #acd6b6;}
+a:hover{color: #ffffff; background-color: #3e6447}
