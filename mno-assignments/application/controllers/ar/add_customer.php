@@ -52,7 +52,7 @@ class Add_Customer extends Application{
             /* All field filled, add item */
             $this->customers->add($_POST);
             /* redirect back to main */
-            redirect("../welcome");
+            redirect("../../ar/welcome");
         }
     }
 

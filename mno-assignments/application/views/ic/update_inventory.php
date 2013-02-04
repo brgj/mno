@@ -8,7 +8,7 @@ quantity - how much of the product we have
 
 Created by Ryan Cairney, Steve Yoo
 --> 
-<form action="/add_inventory/post" method="post">
+<form action="../../ic/add_inventory/post" method="post">
     <p>
 
         <label for="id">Product ID</label>

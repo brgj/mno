@@ -14,6 +14,11 @@ class add_vendor extends Application {
 
     var $tabs = array('/ap/welcome' => 'Accounts Payable', '/ap/add_vendor' => 'Add Vendor');
 
+    function __construct() {
+        parent::__construct();
+        $this->data['tabs'] = $this->tabs;
+    }
+
     /**
      * Reads information from $_POST and attempts to validate it,
      * if no errors are found, the data is sent to the database
@@ -47,7 +52,7 @@ class add_vendor extends Application {
     function index() {
         $this->data['selected'] = '/ap/add_vendor';
         $this->data['pagetitle'] = 'Massive Noob Obliterators - Add Vendor';
-        $this->data['pagebody'] = "add_vendor_form";
+        $this->data['pagebody'] = "ap/add_vendor_form";
         $record = array('id' => '', 'description' => '', 'amount' => '', 'status' => '', 'phone' => '', 'email' => '');
         $this->data = array_merge($this->data, $record);
         $this->render();

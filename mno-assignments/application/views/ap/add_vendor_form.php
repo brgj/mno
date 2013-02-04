@@ -4,7 +4,7 @@
      * Adds several labels and input textBoxes.
      */
     $this->load->helper('form');
-    echo form_open('/ap/add_vendor/post');
+    echo form_open('../../ap/add_vendor/post');
 
     echo form_label('ID','id');
     echo form_input('id','{id}');

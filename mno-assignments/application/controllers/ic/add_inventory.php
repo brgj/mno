@@ -25,7 +25,8 @@ class Add_inventory extends Application {
 
     function index() {
         $this->data['pagetitle'] = 'Massive Noob Obliterators - Add Inventory';
-        $this->data['pagebody'] = "add_inventory";
+        $this->data['pagebody'] = "ic/add_inventory";
+        $this->data['selected'] = '/ic/add_inventory';
         /* Sets defualt valuse to blank so it looks pretty */
         $record = array('id' => '', 'model' => '', 'brand' => '', 'type' => '', 'quantity' => '');
         $this->data = array_merge($this->data, $record);
@@ -67,7 +68,7 @@ class Add_inventory extends Application {
             /* All field filled, add item */
             $this->inventory->add($_POST);
             /* redirect back to main */
-            redirect("/");
+            redirect("../../ic/welcome");
         }
     }
 

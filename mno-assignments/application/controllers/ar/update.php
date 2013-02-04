@@ -50,7 +50,7 @@ class Update extends Application {
             /* All field filled, add item */
             $this->customers->update($_POST);
             /* redirect back to main */
-            redirect("/ar/welcome");
+            redirect("../../ar/welcome");
         }
     }
 }
