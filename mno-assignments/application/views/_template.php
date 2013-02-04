@@ -20,6 +20,13 @@ _<?php
             </div>
             <div id="content">
                 {secondary}
+                <?php
+                if (count($errors) > 0) {
+                    foreach ($errors as $booboo) {
+                        echo '<p><b>Oh noooooo!</b> ' . $booboo . '</p>';
+                    }
+                }
+                ?>
                 {content}
             </div>
             <div id="footer">

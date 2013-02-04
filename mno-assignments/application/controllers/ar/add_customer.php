@@ -35,11 +35,9 @@ class Add_Customer extends Application{
 
     function post() {
         $new_id = $_POST['id'];
-        
-        if($this->customers->get($new_id) != null)
-        {
-            $this->data['errors'][]= 'This ID is already being used';
 
+        if ($this->customers->get($new_id) != null) {
+            $this->data['errors'][] = 'This ID is already being used';
         }
         if ($_POST['cust_name'] == null) {
             $this->data['errors'][] = 'Please enter a Name';
@@ -54,7 +52,7 @@ class Add_Customer extends Application{
             /* All field filled, add item */
             $this->customers->add($_POST);
             /* redirect back to main */
-            redirect("/");
+            redirect("../welcome");
         }
     }
 
