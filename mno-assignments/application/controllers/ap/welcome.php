@@ -14,7 +14,7 @@ if (!defined('APPPATH'))
 class Welcome extends Application {
 
     // sets up the tabs for displaying the data
-    var $tabs = array('/ap/welcome' => 'Accounts Payable', '/ap/add_vendor' => 'Add Vendor');
+    var $tabs = array('/ap/welcome' => 'Accounts Payable', '/ap/add_vendor' => 'Add Vendor', '/ap/update_vendor' => 'Update Vendor');
 
     function __construct() {
         parent::__construct();

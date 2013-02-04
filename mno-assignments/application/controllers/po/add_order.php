@@ -48,7 +48,7 @@ class Add_order extends Application {
         else
         {
             $this->orders->add($_POST);
-            redirect('/');     
+            redirect('../../po/welcome');     
         }
     }
 

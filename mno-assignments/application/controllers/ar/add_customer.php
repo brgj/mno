@@ -10,9 +10,8 @@
  *
  * @author hp
  */
+class Add_Customer extends Application {
 
-class Add_Customer extends Application{
-    
     var $tabs = array('/ar/welcome' => 'Accounts Receivable', '/ar/add_customer' => 'Add Customer', '/ar/update' => 'Update Customer');
 
     function __construct() {

@@ -6,11 +6,11 @@
  */
 
 /**
- * Description of add_vendor
+ * Description of update_vendor
  *
  * @author Fred
  */
-class add_vendor extends Application {
+class update_vendor extends Application {
 
     var $tabs = array('/ap/welcome' => 'Accounts Payable', '/ap/add_vendor' => 'Add Vendor', '/ap/update_vendor' => 'Update Vendor');
 
@@ -28,8 +28,8 @@ class add_vendor extends Application {
     function post() {
         $this->load->helper('ap/validate'); //loads validate_helper.php
         $new_id = $_POST['id'];
-        if ($this->vendors->get($new_id) != null)
-            $this->data['errors'][] = 'Contact ID already used.';
+        if ($this->vendors->get($new_id) == null)
+            $this->data['errors'][] = 'Contact ID does not exist!';
 
         if (!validate_phone($_POST['phone']))
             $this->data['errors'][] = 'Invalid phone number format!';
@@ -40,7 +40,7 @@ class add_vendor extends Application {
         if (count($this->data['errors']) > 0)
             $this->index();
         else {
-            $this->vendors->add($_POST);
+            $this->vendors->update($_POST);
             redirect("../../ap/welcome");
         }
     }
@@ -50,9 +50,9 @@ class add_vendor extends Application {
      * page.
      */
     function index() {
-        $this->data['selected'] = '/ap/add_vendor';
-        $this->data['pagetitle'] = 'Massive Noob Obliterators - Add Vendor';
-        $this->data['pagebody'] = "ap/add_vendor";
+        $this->data['selected'] = '/ap/update_vendor';
+        $this->data['pagetitle'] = 'Massive Noob Obliterators - Update Vendor';
+        $this->data['pagebody'] = "ap/update_vendor";
         $record = array('id' => '', 'description' => '', 'amount' => '', 'status' => '', 'phone' => '', 'email' => '');
         $this->data = array_merge($this->data, $record);
         $this->render();
