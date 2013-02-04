@@ -1,6 +1,6 @@
 <?php
     $this->load->helper('form');
-    echo form_open('../oe/update_invoice/post');
+    echo form_open('../../oe/update_invoice/post');
     echo form_label('id?','id');//actual text
     echo form_input('id','{id}');//textbox
     echo form_label('Customer','customer');//...
