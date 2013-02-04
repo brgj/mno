@@ -13,11 +13,11 @@
 class Add_inventory extends Application {
 
     // sets up the tabs for displaying the data
-    var $tabs = array(
-        '/ic/welcome' => 'Inventory Control',
-        'ic/add_inventory' => 'Add Inventory',
-        'ic/update_inventory' => 'Update Inventory');
-
+    var $tabs = array('/ic/welcome' => 'Inventory Control',
+        '/ic/add_inventory' => 'Add Inventory', //adds 'add inventory' button to menu.
+        '/ic/update_inventory' => 'Update Inventory' //adds 'update inventory' button to menu.
+    );
+    
     function __construct() {
         parent::__construct();
         $this->data['tabs'] = $this->tabs;
