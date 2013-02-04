@@ -6,6 +6,16 @@ html, body {
   margin: auto;
 }
 
+table
+{
+    border-collapse:collapse;
+}
+table,th, td
+{
+    
+    padding-left: 20px; padding-right: 20px;
+}
+
 body {
 	margin: 0px;
 	padding: 0px;
@@ -13,6 +23,9 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 10pt;
 	color: #B0B0B0;
+        position: relative;
+        width: 950px;
+        left: 40px;
 }
 #header { position: relative; margin-right: 1em;
           background-image: url('/assets/images/banner.jpg'); 
@@ -88,7 +101,7 @@ hr {
 
 #wrapper {
   position: relative;
-  width: 100%;
+  width: 950px;
   min-height: 600px;
   margin: 100px auto;
 }
@@ -171,7 +184,7 @@ hr {
 
 #content {
 	float: inside;
-	width: 600px;
+	width: 820px;
 	padding: 40px;
 	background: rgba(0,0,0,0.70);
 }
@@ -193,8 +206,9 @@ hr {
 
 #footer {
 	overflow: hidden;
-	margin: 20px auto 0px auto;
-	padding: 20px 0px;
+	margin: 20px 50px 0px auto;
+	padding: 0px 0px;
+        width: 900px;
 	background: rgba(0,0,0,0.70);
 }
 
@@ -248,7 +262,7 @@ ul.style1 .first {
 	display: inline-block;
 	background-color: #1F768D;
 	margin-top: 20px;
-	padding: 5px 30px;
+	padding: 4px 30px;
 	height: 24px;
 	line-height: 24px;
 	text-decoration: none;
