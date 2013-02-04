@@ -5,7 +5,6 @@
  * @author : Tammy Hoang & Dylan Jack
  */
 ?>
-<div id="ledgerheader">General Ledger</div>
 <table cols="" border="0" id="ledgertable">
     <tr>
         <th>Account number</th>
