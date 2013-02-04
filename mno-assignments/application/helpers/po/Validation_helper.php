@@ -21,7 +21,7 @@ function date_validation($date)
 }
 function orderID_validation($orderID)
 {     
-     if(preg_match('^[0-9]{1,10}$', $orderID)){
+     if(preg_match('^[0-9]{1,20}$', $orderID)){
          return true;
      }else{
          return false;
