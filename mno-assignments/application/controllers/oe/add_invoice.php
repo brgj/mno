@@ -50,7 +50,7 @@ class Add_invoice extends Application {
             $this->index();
         } else {
             $this->invoice->add($_POST); //all is good add contact...
-            redirect("/"); //... and redirect back to main
+            redirect("/oe/welcome"); //... and redirect back to main
         }
     }
 
