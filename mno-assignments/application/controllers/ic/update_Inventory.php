@@ -6,12 +6,11 @@
  */
 
 /**
- * Inventory controller, allowing user to add item to inventory and current status of it.
+ * Description of update_Inventory
  *
- * @author Ryan Cairney, Steve Yoo
+ * @author Ryan
  */
-class Add_inventory extends Application {
-
+class Update_inventory {
     // sets up the tabs for displaying the data
     var $tabs = array(
         '/ic/welcome' => 'Inventory Control',
@@ -24,8 +23,8 @@ class Add_inventory extends Application {
     }
 
     function index() {
-        $this->data['pagetitle'] = 'Massive Noob Obliterators - Add Inventory';
-        $this->data['pagebody'] = "add_inventory";
+        $this->data['pagetitle'] = 'Massive Noob Obliterators - Update Inventory';
+        $this->data['pagebody'] = "update_inventory";
         /* Sets defualt valuse to blank so it looks pretty */
         $record = array('id' => '', 'model' => '', 'brand' => '', 'type' => '', 'quantity' => '');
         $this->data = array_merge($this->data, $record);
@@ -40,8 +39,8 @@ class Add_inventory extends Application {
 
         $new_id = $_POST['id'];
         /* check to see if product exists in database */
-        if ($this->inventory->get($new_id) != null) {
-            $this->data['errors'][] = 'Product ID already used.';
+        if ($this->inventory->get($new_id) == null) {
+            $this->data['errors'][] = 'Product ID not found.';
         }
         /* Check that somthing is enterd */
         if ($_POST['model'] == null) {
@@ -65,7 +64,7 @@ class Add_inventory extends Application {
             $this->index();
         } else {
             /* All field filled, add item */
-            $this->inventory->add($_POST);
+            $this->inventory->update($_POST);
             /* redirect back to main */
             redirect("/");
         }
