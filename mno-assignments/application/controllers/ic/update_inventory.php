@@ -58,7 +58,7 @@ class Update_inventory extends Application{
         }
         /* Check we don have a negative value or nothing */
         if ($_POST['quantity'] == null) {
-            $this->data['errors'][] = 'Product Type field cannot be empty.';
+            $this->data['errors'][] = 'Product Quantity field cannot be empty.';
         }
 
         /* display errors, don't redirect back to main */
