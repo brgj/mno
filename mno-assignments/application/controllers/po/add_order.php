@@ -33,9 +33,13 @@ class Add_order extends Application {
         $this->load->helper('po/validation_helper');
         
         $new_id = $_POST['orderID'];
+        
         if ($this->orders->get($new_id) != null)
             $this->data['errors'][] = 'Order ID already in use';
-        
+            
+        if (!orderID_validation($new_id)
+            $this->data['errors'][] = 'Order ID invalid';
+            
         if (!date_validation($_POST['orderDate']))
             $this->data['errors'][] = 'Invalid date; Usage: YYYY/MM/DD';
         
