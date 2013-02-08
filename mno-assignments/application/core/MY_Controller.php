@@ -33,7 +33,7 @@ class Application extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->data = array();
-        $this->data['title'] = 'COMP4711 Winter 2013 Idea';
+        $this->data['title'] = 'Group MNO';
         $this->data['errors'] = array();
     }
 
