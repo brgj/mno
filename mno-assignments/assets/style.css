@@ -14,6 +14,7 @@ table,th, td
 {
     
     padding-left: 20px; padding-right: 20px;
+    padding-top: 5px; padding-bottm: 5px;
 }
 
 body {
@@ -308,13 +309,29 @@ pre {font-size: 80%;}
 .report_bottom td {text-align:right;font-size: 120%; font-weight: bold}
 
 
-
-
-
-
-
-
-
-
-
-
+.button {
+   border: 1px solid #f7f9fa;
+   background: #3e6447;
+   padding: 3px 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 2px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #ffffff;
+   font-size: 9px;
+   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-color: #26755f;
+   background: #26755f;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #1b5c39;
+   background: #1b5c39;
+   }

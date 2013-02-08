@@ -19,6 +19,8 @@ if (!defined('APPPATH'))
         <th>Order Description</th>
         <th>Order Status</th>
         <th>Order Date</th>
+        <th></th>
+        <th></th>
     </tr>
     {inventory}
     <tr>
@@ -27,6 +29,8 @@ if (!defined('APPPATH'))
         <td>{brand}</td>
         <td>{type}</td>
         <td>{quantity}</td>
+        <td><button class="button">Update</button></td>
+        <td><button class="button">Delete</button></td>
     </tr>
     {/inventory}
 </table>

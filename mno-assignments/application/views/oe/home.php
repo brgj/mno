@@ -19,6 +19,8 @@ if (!defined('APPPATH'))
         <th>Order Description</th>
         <th>Order Status</th>
         <th>Order Date</th>
+        <th></th>
+        <th></th>
     </tr>
     {invoice}
     <tr>
@@ -27,6 +29,8 @@ if (!defined('APPPATH'))
         <td>{description}</td>
         <td>{status}</td>
         <td>{order_date}</td>
+        <td><button class="button">Update</button></td>
+        <td><button class="button">Delete</button></td>
     </tr>
     {/invoice}
 </table>

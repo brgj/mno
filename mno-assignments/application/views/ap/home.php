@@ -19,6 +19,8 @@ if (!defined('APPPATH'))
         <th>Status</th>
         <th>Phone</th>
         <td>E-mail</td>
+        <th></th>
+        <th></th>
     </tr>
     {vendors}
     <tr>
@@ -28,6 +30,8 @@ if (!defined('APPPATH'))
         <td>{status}</td>
         <td>{phone}</td>
         <td>{email}</td>
+        <td><button class="button">Update</button></td>
+        <td><button class="button">Delete</button></td>
     </tr>
     {/vendors}
 </table>

@@ -17,8 +17,8 @@
             <td>{id}</td>
             <td>{cust_name}</td>
             <td>{status}</td>
-            <td></td>
-            <td></td>
+            <td><button class="button">Update</button></td>
+            <td><button class="button">Delete</button></td>
         </tr>
         {/customers}
     </table>
